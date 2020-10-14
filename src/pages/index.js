@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => {
         <Container>
           {/* Intro section  */}
           <Column isSize="2/3">
-            <Title>Welcome John, this is your Gatsby site</Title>
+            <Title>Welcome Katso, this is your Gatsby site</Title>
             <Content>
               <p>
                 This barebones starter ships with the main{" "}
