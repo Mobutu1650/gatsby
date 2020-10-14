@@ -31,7 +31,7 @@ export default class hero extends Component {
                   id="btn-spaced"
                 >
                   {/* Call to action button icon */}
-                  <span>Download Now</span>
+                  <span>Download Later</span>
                   <Icon className="fab fa-github fa-sm" />
                 </Button>
               </Column>
