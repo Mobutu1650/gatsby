@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import {
   Navbar,
@@ -32,6 +34,11 @@ export default class navbar extends Component {
         <Container>
           {/* Site title link */}
           <NavbarBrand>
+          <NavbarItem>
+
+          <Img fluid={props.data.imageLogo.childImageSharp.fluid}  />
+        <img src={brand}  />
+          </NavbarItem>
             <Link to="/" className="navbar-item">
               {this.props.siteTitle}
             </Link>
@@ -80,3 +87,15 @@ export default class navbar extends Component {
     )
   }
 }
+
+export const pageQuery = graphql`
+  query {
+    imageLogo: file(relativePath: { eq: "AxelestrieLogo.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
