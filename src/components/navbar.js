@@ -86,15 +86,3 @@ export default class navbar extends Component {
   }
 }
 
-const newLocal = `
-  query {
-    imageLogo: file(relativePath: { eq: "AxelestrieLogo.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;
-export const pageQuery = graphqlnewLocal;
