@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby + Bloomer`,
+    title: `Gatsby + Test`,
     description: `Kick off your next Gatsby project with Bloomer components. `,
     author: `@zlidev`,
   },
