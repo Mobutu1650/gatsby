@@ -1,8 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { graphql } from 'gatsby';
-import Img from 'gatsby-image';
+import logo from "./src/images/AxelestrieLogo.png"
 
 import {
   Navbar,
@@ -33,9 +32,11 @@ export default class navbar extends Component {
       <Navbar>
         <Container>
           {/* Site title link */}
+
+          
           <NavbarBrand>
           <NavbarItem>
-          <Img fluid={props.data.imageLogo.childImageSharp.fluid}  />
+          <img src={logo} style={{ marginRight: 5 }} />
           </NavbarItem>
             <Link to="/" className="navbar-item">
               {this.props.siteTitle}
