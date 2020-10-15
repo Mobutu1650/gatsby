@@ -35,9 +35,7 @@ export default class navbar extends Component {
           {/* Site title link */}
           <NavbarBrand>
           <NavbarItem>
-
           <Img fluid={props.data.imageLogo.childImageSharp.fluid}  />
-        <img src={brand}  />
           </NavbarItem>
             <Link to="/" className="navbar-item">
               {this.props.siteTitle}
