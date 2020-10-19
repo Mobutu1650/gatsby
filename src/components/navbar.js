@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import Logo from "../images/AxelestrieLogo.png"
 
 
 import {
@@ -16,6 +17,7 @@ import {
 } from "bloomer"
 
 export default class navbar extends Component {
+
   static propTypes = {
     siteTitle: PropTypes.string.isRequired,
   }
@@ -27,15 +29,16 @@ export default class navbar extends Component {
     this.setState({ isOpen: !this.state.isOpen })
   }
 
+
   render() {
     return (
       <Navbar>
         <Container>
           {/* Site title link */}
           <NavbarBrand>
-            <Link to="/" className="navbar-item">
-              {this.props.siteTitle}
-            </Link>
+          <NavbarItem>
+            <img src="{Logo}" alt="Axelestrie"/>
+          </NavbarItem>
             <NavbarBurger
               isActive={this.state.isOpen}
               onClick={this.toggleCollapse}
@@ -63,16 +66,7 @@ export default class navbar extends Component {
               </Link>
               {/* Github download button */}
               <NavbarItem>
-                <Button
-                  href="https://github.com/zlutfi/gatsby-starter-bloomer"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="is-rounded"
-                  isSize="small"
-                >
-                  <span>Download on Github</span>
-                  <Icon className="fab fa-github fa-sm" />
-                </Button>
+              <img src="{Logo}" alt="Axelestrie"/>
               </NavbarItem>
             </NavbarEnd>
           </NavbarMenu>
